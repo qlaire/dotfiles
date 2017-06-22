@@ -1,4 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
-let g:netrw_dirhist_1='/Users/clairedranginis/Development/daily-beast/tdb-etl'
-let g:netrw_dirhist_2='/Users/clairedranginis/Development/daily-beast/tdb-etl/src'
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/Users/clairedranginis/Development/daily-beast/thedailybeast/src'
+let g:netrw_dirhist_2='/Users/clairedranginis/Development/daily-beast/thedailybeast/coverage'
+let g:netrw_dirhist_3='/Users/clairedranginis/Development/daily-beast/thedailybeast'
+let g:netrw_dirhist_4='/Users/clairedranginis/Development/daily-beast/thedailybeast/scripts'
