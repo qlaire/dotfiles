@@ -13,6 +13,10 @@ Plugin 'rakr/vim-one'
 Plugin 'vim-airline/vim-airline'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'jiangmiao/auto-pairs'
+Plugin 'rking/ag.vim'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'tpope/vim-fugitive'
+Plugin 'ervandew/supertab'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -49,9 +53,8 @@ set backspace=indent,eol,start
 set laststatus=2
 set relativenumber
 set undofile
+set updatetime=250
 " Search related stuff
-nnoremap / /\v
-vnoremap / /\v
 set ignorecase
 set smartcase
 set gdefault
@@ -135,3 +138,5 @@ let NERDSpaceDelims = 1
 map <leader>/   <plug>NERDCommenterToggle
 map <D-/>       <plug>NERDCommenterToggle
 imap <D-/>      <Esc><plug>NERDCommenterToggle i
+" Silver Searcher
+map <leader>F :Ag<Space>
