@@ -20,6 +20,7 @@ Plugin 'ervandew/supertab'
 Plugin 'tpope/vim-surround'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'tpope/vim-repeat'
+Plugin 'christoomey/vim-tmux-navigator'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -31,6 +32,18 @@ nmap <leader>l :set list!<CR>
 set listchars=tab:▸\ ,eol:¬,space:·
 set colorcolumn=90
 set number
+" cool mappings
+nmap 0 ^
+" Copy the entire buffer into the system register
+nmap <leader>co ggVG*y
+" Command aliases for typoed commands (accidentally holding shift too long)
+command! Q q " Bind :Q to :q
+command! Qall qall
+command! QA qall
+command! E e"
+command! Wq wq
+command! W w
+nnoremap ; :
 " Re-source vimrc
 map <leader>s :source ~/.vimrc<CR>
 set hidden
