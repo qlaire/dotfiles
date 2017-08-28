@@ -21,6 +21,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'tpope/vim-repeat'
 Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'tpope/tpope-vim-abolish'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -44,6 +45,8 @@ command! E e"
 command! Wq wq
 command! W w
 nnoremap ; :
+noremap ;; ;
+noremap ,. ,
 " Re-source vimrc
 map <leader>s :source ~/.vimrc<CR>
 set hidden
@@ -55,6 +58,7 @@ set softtabstop=2
 set expandtab
 set smartindent
 set autoindent
+set autoread
 set encoding=utf-8
 set scrolloff=3
 set showmode
@@ -93,20 +97,9 @@ map \           :NERDTreeToggle<CR>
 
 " File tree browser showing current file - pipe (shift-backslash)
 map \|          :NERDTreeFind<CR>
-" Navigate tabs with alt keys
-map ¡ 1gt
-map ™ 2gt
-map £ 3gt
-map ¢ 4gt
-map ∞ 5gt
-map § 6gt
-map ¶ 7gt
-map • 8gt
-map ª 9gt
-map º :tablast<CR>
-" Scroll through tabs with Alt + [ and Alt + ]
-map “ gT
-map ‘ gt
+" Open and close the quickfix window
+map <leader>qo  :copen<CR>
+map <leader>qc  :cclose<CR>
 " Move between splits with CTRL + hjkl
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
@@ -125,6 +118,11 @@ nmap <leader>b :CtrlPBuffer<CR>
 
 " https://github.com/kien/ctrlp.vim/issues/174
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+
+" Copy paste with no indendation
+nnoremap <F2> :set invpaste paste?<CR>
+set pastetoggle=<F2>
+set showmode
 
 " true color support for tmux
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
@@ -158,6 +156,17 @@ map <D-/>       <plug>NERDCommenterToggle
 imap <D-/>      <Esc><plug>NERDCommenterToggle i
 " Silver Searcher
 map <leader>F :Ag<Space>
+" The Silver Searcher
+if executable('ag')
+  " Use ag over grep
+  set grepprg=ag\ --nogroup\ --nocolor
+
+  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+
+  " ag is fast enough that CtrlP doesn't need to cache
+  let g:ctrlp_use_caching = 0
+endif
 " Syntastic
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
