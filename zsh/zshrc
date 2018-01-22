@@ -163,3 +163,7 @@ eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 export BPV2DEBUG='True'
 export BPV2SECRET='i_%eb6^#j4yecsb+n1+3g9(=u%pli&dpq)(*w%m)yl480'
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+export BPV2DEBUG='True'
+export BPV2SECRET='i_%eb6^#j4yecsb+n1+3g9(=u%pli&dpq)(*w%m)yl480'
