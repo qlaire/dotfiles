@@ -59,6 +59,7 @@ set expandtab
 set smartindent
 set autoindent
 set autoread
+au CursorHold * checktime
 set encoding=utf-8
 set scrolloff=3
 set showmode
@@ -174,3 +175,5 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_javascript_eslint_exe='$(npm bin)/eslint'
+" Save on exit insert mode
+autocmd InsertLeave * write
