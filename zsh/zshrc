@@ -107,62 +107,14 @@ export REMOTE_RETRO_GOOGLE_OAUTH_CLIENT_ID=295167791675-j1o5ucl3c3jeputmqk0aib20
 export REMOTE_RETRO_GOOGLE_OAUTH_CLIENT_SECRET=mNZX5ku2gNazD1fZhhoB6XJo
 export REMOTE_RETRO_GOOGLE_OAUTH_REDIRECT_URI=http://localhost:4000/auth/google/callback
 
-echo 'eval "$(pyenv init -)"' >> ~/.zshrc
-echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.zshrc
-echo "export BPV2DEBUG='True'" >> ~/.zshrc
-echo "export BPV2SECRET='i_%eb6^#j4yecsb+n1+3g9(=u%pli&dpq)(*w%m)yl480'" >> ~/.zshrc
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-export BPV2DEBUG='True'
-export BPV2SECRET='i_%eb6^#j4yecsb+n1+3g9(=u%pli&dpq)(*w%m)yl480'
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-export BPV2DEBUG='True'
-export BPV2SECRET='i_%eb6^#j4yecsb+n1+3g9(=u%pli&dpq)(*w%m)yl480'
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-export BPV2DEBUG='True'
-export BPV2SECRET='i_%eb6^#j4yecsb+n1+3g9(=u%pli&dpq)(*w%m)yl480'
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-export BPV2DEBUG='True'
-export BPV2SECRET='i_%eb6^#j4yecsb+n1+3g9(=u%pli&dpq)(*w%m)yl480'
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-export BPV2DEBUG='True'
-export BPV2SECRET='i_%eb6^#j4yecsb+n1+3g9(=u%pli&dpq)(*w%m)yl480'
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-export BPV2DEBUG='True'
-export BPV2SECRET='i_%eb6^#j4yecsb+n1+3g9(=u%pli&dpq)(*w%m)yl480'
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-export BPV2DEBUG='True'
-export BPV2SECRET='i_%eb6^#j4yecsb+n1+3g9(=u%pli&dpq)(*w%m)yl480'
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-export BPV2DEBUG='True'
-export BPV2SECRET='i_%eb6^#j4yecsb+n1+3g9(=u%pli&dpq)(*w%m)yl480'
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-export BPV2DEBUG='True'
-export BPV2SECRET='i_%eb6^#j4yecsb+n1+3g9(=u%pli&dpq)(*w%m)yl480'
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-export BPV2DEBUG='True'
-export BPV2SECRET='i_%eb6^#j4yecsb+n1+3g9(=u%pli&dpq)(*w%m)yl480'
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-export BPV2DEBUG='True'
-export BPV2SECRET='i_%eb6^#j4yecsb+n1+3g9(=u%pli&dpq)(*w%m)yl480'
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-export BPV2DEBUG='True'
-export BPV2SECRET='i_%eb6^#j4yecsb+n1+3g9(=u%pli&dpq)(*w%m)yl480'
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-export BPV2DEBUG='True'
-export BPV2SECRET='i_%eb6^#j4yecsb+n1+3g9(=u%pli&dpq)(*w%m)yl480'
+###-tns-completion-start-###
+if [ -f /Users/clairedranginis/.tnsrc ]; then
+    source /Users/clairedranginis/.tnsrc
+fi
+###-tns-completion-end-###
+export ANDROID_HOME=/usr/local/share/android-sdk
+# export JAVA_HOME=/Library/Java/Home
+export JAVA_HOME=$(/usr/libexec/java_home)
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 export BPV2DEBUG='True'
