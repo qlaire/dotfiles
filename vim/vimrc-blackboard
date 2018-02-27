@@ -105,6 +105,8 @@ set wildignore+=public/uploads/**
 set wildignore+=public/images/**
 set wildignore+=vendor/**
 set nowrap                                        " Turn off line wrapping
+set smartindent
+set autoindent
 
 "#############################################################################
 " Misc
