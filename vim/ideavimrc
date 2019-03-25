@@ -1,3 +1,12 @@
+set ignorecase
+set number
+set relativenumber
+set surround
+
 let mapleader=","
 " Get out of normal mode with jj
 inoremap jj <ESC>
+
+" map 0 to go to the first non-blank character instead of the beginning of the
+" line
+nmap 0 ^
